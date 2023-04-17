@@ -35,3 +35,21 @@ Question
   >> object.up()
   >> object.down()
   >> object.go_to(-1)       % since it has 1 more parameter other than "self" parameter
+
+====================INHERITANCE====================
+(reduce code duplication by GENERALIZING our code) == (grouping concepts which have relationships together)
+
+class Animal:
+  """Represent an animal that can say their name"""  
+  def __init__(self, name, sound):
+    self.name = name
+    self.sound = sound
+  def speak(self):
+    """Outputs a message including the name of the animal"""
+    print("{sound}! I'm {name}! {sound}!".format(name=self.name, sound=self.sound))
+    
+>> class Piglet(Animal)                       % Animal = parent & Piglet = sibling
+>> Hamlet = Piglet("Hamlet", "Oink")
+
+>> class Kitty(Animal)
+>> Tom = Kitty("Tom", "Meow")
